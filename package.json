@@ -12,8 +12,14 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@fontsource-variable/cinzel": "^5.2.8",
+    "@fontsource-variable/dm-sans": "^5.2.8",
+    "@fontsource-variable/source-serif-4": "^5.2.9",
+    "@fontsource/poppins": "^5.2.7",
+    "@fontsource/source-sans-pro": "^5.2.5",
     "@mui/icons-material": "^7.3.6",
     "@mui/material": "^7.3.6",
+    "@tailwindcss/vite": "^4.1.18",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router": "^7.11.0"
@@ -28,6 +34,7 @@
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-react-refresh": "^0.4.24",
     "globals": "^16.5.0",
+    "tailwindcss": "^4.1.18",
     "vite": "^7.2.4"
   }
 }

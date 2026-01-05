@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+body {
+    font-family: 'DM Sans Variable', serif;
+}
+
+@layer utilities {
+    .container {
+        margin-inline: auto;
+        padding-inline: 2rem;
+        width: 100%;
+        max-width: 1400px;
+    }
+
+    .brand {
+        font-family: 'Cinzel Variable';
+        font-weight: 600;
+    }
+}

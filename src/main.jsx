@@ -2,10 +2,17 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 
+// Supports weights 100-900
+import "@fontsource-variable/dm-sans";
+// Supports weights 400-900
+import "@fontsource-variable/cinzel";
+
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Home from "./pages/Home/Home.jsx";
 import ProductDetails from "./pages/ProductDetails/ProductDetails.jsx";
+
+import "./index.css";
 
 const router = createBrowserRouter([
     {
@@ -25,5 +32,7 @@ const router = createBrowserRouter([
 ]);
 
 createRoot(document.getElementById("root")).render(
-    <RouterProvider router={router} />
+    <StrictMode>
+        <RouterProvider router={router} />
+    </StrictMode>
 );
