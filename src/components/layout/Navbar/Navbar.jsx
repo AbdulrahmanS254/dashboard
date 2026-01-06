@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "motion/react";
 import MobileSidebar from "./MobileSidebar";
 
 import { NavLink } from "react-router";
@@ -11,10 +12,26 @@ const linkClass =
 export default function Navbar() {
     const [open, setOpen] = useState(false);
 
+    // Animation Variants
+    const navVariants = {
+        hidden: { opacity: 0, x: -20 },
+        visible: {
+            opacity: 1,
+            x: 0,
+            transition: { duration: 0.6, ease: "easeOut" },
+        },
+    };
+
     return (
         <>
             <nav className="bg-stone-950 text-white py-5">
-                <div className="container flex justify-between items-center">
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true }}
+                    variants={navVariants}
+                    className="container flex justify-between items-center"
+                >
                     {/* Logo */}
                     <div className="brand text-3xl uppercase">
                         <NavLink to={"/"}>
@@ -66,7 +83,7 @@ export default function Navbar() {
                     >
                         <FaBars />
                     </button>
-                </div>
+                </motion.div>
             </nav>
             {/* Mobile Sidebar */}
             <MobileSidebar open={open} />
