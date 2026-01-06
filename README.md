@@ -1,43 +1,65 @@
-# 📊 React Admin Dashboard (Learning Journey)
+# 💎 Quartz Store
 
-> **Current Status:** 🚧 Under Development (Phase 1: UI & Structure)
+> **A Modern Product Management App built with React & Redux Toolkit.**
 
-A modern, responsive Admin Dashboard built with **React** and **Material UI (MUI)**. 
-This project serves as a practical playground to master component-based styling libraries and advanced state management.
+**Quartz** is a dynamic single-page application (SPA) designed to simulate a real-world e-commerce dashboard. The primary focus of this project is to implement a robust **Global State Management** architecture using Redux Toolkit, wrapped in a clean, responsive UI powered by Tailwind CSS.
 
-## 🎯 Learning Goals & Motivation
+---
 
-This project is not just about building a dashboard; it's about mastering specific architectural and styling concepts:
+## 🎯 Project Focus & Learning Goals
 
-* **Mastering Material UI:** Moving beyond utility-first CSS (Tailwind) to understand **Component-Based Styling** and the MUI `sx` prop system.
-* **Professional UI/UX:** Creating a "pixel-perfect," industry-standard interface suitable for real-world admin panels.
-* **Scalable Structure:** Designing a layout that handles complex navigation (Sidebar, Navbar, Nested Routes).
-* **State Management (Upcoming):** Implementing **Redux Toolkit** to manage global application state effectively.
+This project serves as a practical implementation of advanced Front-End concepts:
+
+* **State Management:** Moving away from "Prop Drilling" to a centralized **Redux Store** for managing Cart and Product data.
+* **Modern Styling:** Utilizing **Tailwind CSS v4** for a utility-first, responsive design approach.
+* **Routing:** implementing **React Router v6** for seamless client-side navigation.
+* **Clean Architecture:** Separating Logic (Slices/Reducers) from UI (Components).
 
 ## 🛠️ Tech Stack
 
 * **Framework:** [React.js](https://reactjs.org/) (Vite)
-* **Styling:** [Material UI (MUI)](https://mui.com/) - Core & Icons
-* **Routing:** React Router DOM v6
-* **State Management:** Redux Toolkit *(Planned for Phase 2)*
-* **Charts:** *(Planned: Recharts or Chart.js)*
+* **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+* **State Management:** Redux Toolkit (RTK) & React-Redux
+* **Routing:** React Router DOM
+* **Icons:** React Icons / Phosphor Icons
 
-## 🗺️ Project Roadmap
+## ✨ Key Features
 
-I am building this project in two distinct phases to ensure focus and code quality:
+### 🛒 Consumer Side
+* **Product Browse:** Display available products in a responsive grid layout.
+* **Smart Cart:** Add/Remove items with real-time updates to the cart counter and total price.
+* **Favorites:** Mark items as favorites (persisted state).
 
-### Phase 1: The UI Shell (Current Focus 🎨)
-* [x] Project Setup with Vite & MUI.
-* [ ] **Layout Architecture:** Building a responsive Sidebar (Drawer) and Top Navbar.
-* [ ] **Component Styling:** Customizing MUI components (Buttons, Inputs, Cards) to fit a specific theme.
-* [ ] **Static Pages:** Designing the "Dashboard Home", "Users List", and "Products" views with placeholder data.
-* [ ] **Responsive Design:** Ensuring the drawer and grid system work seamlessly on mobile.
+### ⚙️ Admin Side
+* **Dashboard View:** A centralized view to manage inventory.
+* **Create Product:** A dynamic form to add new items to the global store.
+* **Edit/Delete:** Full control over existing products.
 
-### Phase 2: Logic & Interactivity (Upcoming ⚙️)
-* [ ] **Redux Integration:** Setting up the Store, Slices, and Providers.
-* [ ] **Data Fetching:** Replacing static data with simulated API calls.
-* [ ] **CRUD Operations:** Making the "Add/Edit Product" forms functional.
-* [ ] **Dynamic Charts:** Visualizing real data.
+## 🚀 Getting Started
 
----
-*This project is part of my journey to deepen my Front-End Engineering skills, running parallel to my university studies.*
+Follow these steps to run the project locally:
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/quartz-store.git](https://github.com/your-username/quartz-store.git)
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+
+## 📂 Project Structure
+
+```bash
+src/
+├── app/             # Redux Store configuration
+├── components/      # Reusable UI components (Navbar, Cards, Buttons)
+├── features/        # Redux Slices (cartSlice, productsSlice)
+├── pages/           # Application Views (Home, Admin, Create)
+└── App.jsx          # Main Entry with Routing
