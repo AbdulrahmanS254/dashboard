@@ -38,7 +38,7 @@ const dotVariants = {
 };
 export default function Hero() {
     return (
-        <>
+        <section id="hero">
             <div className="container h-[70vh] sm:h-[85vh] flex items-center my-4">
                 <motion.div
                     variants={containerVariants}
@@ -64,6 +64,6 @@ export default function Hero() {
                     </motion.picture>
                 </motion.div>
             </div>
-        </>
+        </section>
     );
 }

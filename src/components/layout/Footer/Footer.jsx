@@ -1,11 +1,11 @@
 import { Link } from "react-router";
+import { motion } from "framer-motion";
 import {
     FaFacebookF,
     FaTwitter,
     FaInstagram,
     FaLinkedinIn,
 } from "react-icons/fa";
-import { motion } from "framer-motion";
 
 export default function Footer() {
     // Animation Variants
@@ -30,10 +30,7 @@ export default function Footer() {
                 >
                     {/* 1. Brand Section */}
                     <div className="flex flex-col gap-4">
-                        <Link
-                            to="/"
-                            className="text-3xl uppercase font-bold text-white"
-                        >
+                        <Link to="/" className="text-3xl font-bold text-white">
                             <span className="text-orange-500">Q</span>urio
                         </Link>
                         <p className="text-stone-400 text-sm leading-relaxed">

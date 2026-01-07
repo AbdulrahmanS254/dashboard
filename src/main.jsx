@@ -2,15 +2,19 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 
-// Supports weights 100-900
+// Supports weights 100-900 [Main Text font]
 import "@fontsource-variable/dm-sans";
-// Supports weights 100-900
-import '@fontsource-variable/montserrat';
+// Supports weights 200-800 [Brand Font]
+import "@fontsource-variable/plus-jakarta-sans";
 
-import { createBrowserRouter } from "react-router";
-import { RouterProvider } from "react-router/dom";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./pages/Home/Home.jsx";
+import Products from "./pages/Products/Products.jsx";
 import ProductDetails from "./pages/ProductDetails/ProductDetails.jsx";
+import Admin from "./pages/Admin/Admin.jsx";
+import Create from "./pages/Create/Create.jsx";
+import Login from "./pages/Login/Login.jsx";
+import Cart from "./pages/Cart/Cart.jsx";
 
 import "./index.css";
 
@@ -24,8 +28,28 @@ const router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: "/productDetails",
+                path: "/products",
+                element: <Products />,
+            },
+            {
+                path: "/products/:id",
                 element: <ProductDetails />,
+            },
+            {
+                path: "/admin",
+                element: <Admin />,
+            },
+            {
+                path: "/login",
+                element: <Login />,
+            },
+            {
+                path: "/create",
+                element: <Create />,
+            },
+            {
+                path: "/cart",
+                element: <Cart />,
             },
         ],
     },

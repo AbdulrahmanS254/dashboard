@@ -33,7 +33,7 @@ export default function Navbar() {
                     className="container flex justify-between items-center"
                 >
                     {/* Logo */}
-                    <div className="brand text-3xl uppercase">
+                    <div className="brand text-3xl">
                         <NavLink to={"/"}>
                             <span className="text-orange-500">Q</span>
                             urio
