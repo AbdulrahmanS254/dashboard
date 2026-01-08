@@ -1,9 +1,11 @@
 import { Link } from "react-router";
 import { LuShoppingCart } from "react-icons/lu";
 
+const id = 1;
+
 const ProductCard = () => {
     return (
-        <Link className="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-orange-400/20 transition-all duration-300">
+        <Link to={`/product/${id}`} className="group relative rounded-2xl overflow-hidden shadow-xl hover:shadow-orange-400/20 transition-all duration-300">
             {/* Card Image */}
             <div className="relative h-72 overflow-hidden">
                 <img

@@ -15,11 +15,11 @@ export default function MobileSidebar({ open }) {
                         stiffness: 300,
                         damping: 25,
                     }}
-                    className="md:hidden absolute top-20 left-0 w-full"
+                    className="md:hidden absolute top-20 left-0 w-full z-20"
                 >
                     <div className="p-2">
-                        <div className="links rounded-2xl bg-amber-500 py-6 px-6 font-bold">
-                            <ul className="list-none flex flex-col gap-3">
+                        <div className="links rounded-2xl bg-orange-500 py-8 px-6 font-bold">
+                            <ul className="list-none flex flex-col gap-4 text-white text-xl">
                                 <li>
                                     <NavLink to={"/products"}>Products</NavLink>
                                 </li>
